@@ -8,14 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var viewModel = ContentViewModel()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        Button("Click") {
+            self.viewModel.tapButton()
         }
-        .padding()
+        .alert(
+            isPresented: $viewModel.showingAlert
+        ) {
+            Alert(
+                title: Text("Daily Cats"),
+                message: Text(viewModel.text),
+                dismissButton: .default(Text("Dismiss"))
+            )
+        }
     }
 }
 

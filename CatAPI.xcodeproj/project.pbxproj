@@ -14,6 +14,11 @@
 		83C09F232ABC651500C50A01 /* CatAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C09F222ABC651500C50A01 /* CatAPITests.swift */; };
 		83C09F2D2ABC651500C50A01 /* CatAPIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C09F2C2ABC651500C50A01 /* CatAPIUITests.swift */; };
 		83C09F2F2ABC651500C50A01 /* CatAPIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C09F2E2ABC651500C50A01 /* CatAPIUITestsLaunchTests.swift */; };
+		83C09F3E2ABC6FC600C50A01 /* CatFact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C09F3D2ABC6FC600C50A01 /* CatFact.swift */; };
+		83C09F402ABC7CD000C50A01 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C09F3F2ABC7CD000C50A01 /* NetworkManager.swift */; };
+		83C09F432ABC7D8F00C50A01 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C09F422ABC7D8F00C50A01 /* ContentViewModel.swift */; };
+		83C09F452ABC7DAF00C50A01 /* FactError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C09F442ABC7DAF00C50A01 /* FactError.swift */; };
+		83C09F472ABC7DC200C50A01 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C09F462ABC7DC200C50A01 /* HttpMethod.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,11 @@
 		83C09F282ABC651500C50A01 /* CatAPIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatAPIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C09F2C2ABC651500C50A01 /* CatAPIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatAPIUITests.swift; sourceTree = "<group>"; };
 		83C09F2E2ABC651500C50A01 /* CatAPIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatAPIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		83C09F3D2ABC6FC600C50A01 /* CatFact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFact.swift; sourceTree = "<group>"; };
+		83C09F3F2ABC7CD000C50A01 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		83C09F422ABC7D8F00C50A01 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		83C09F442ABC7DAF00C50A01 /* FactError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactError.swift; sourceTree = "<group>"; };
+		83C09F462ABC7DC200C50A01 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +104,9 @@
 		83C09F102ABC651500C50A01 /* CatAPI */ = {
 			isa = PBXGroup;
 			children = (
+				83C09F412ABC7D8400C50A01 /* ViewModel */,
+				83C09F3C2ABC6FB100C50A01 /* Model */,
+				83C09F3B2ABC6FAA00C50A01 /* Network */,
 				83C09F112ABC651500C50A01 /* CatAPIApp.swift */,
 				83C09F132ABC651500C50A01 /* ContentView.swift */,
 				83C09F152ABC651500C50A01 /* Assets.xcassets */,
@@ -125,6 +138,32 @@
 				83C09F2E2ABC651500C50A01 /* CatAPIUITestsLaunchTests.swift */,
 			);
 			path = CatAPIUITests;
+			sourceTree = "<group>";
+		};
+		83C09F3B2ABC6FAA00C50A01 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				83C09F3F2ABC7CD000C50A01 /* NetworkManager.swift */,
+				83C09F442ABC7DAF00C50A01 /* FactError.swift */,
+				83C09F462ABC7DC200C50A01 /* HttpMethod.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		83C09F3C2ABC6FB100C50A01 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				83C09F3D2ABC6FC600C50A01 /* CatFact.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		83C09F412ABC7D8400C50A01 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				83C09F422ABC7D8F00C50A01 /* ContentViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +296,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83C09F402ABC7CD000C50A01 /* NetworkManager.swift in Sources */,
 				83C09F142ABC651500C50A01 /* ContentView.swift in Sources */,
 				83C09F122ABC651500C50A01 /* CatAPIApp.swift in Sources */,
+				83C09F472ABC7DC200C50A01 /* HttpMethod.swift in Sources */,
+				83C09F3E2ABC6FC600C50A01 /* CatFact.swift in Sources */,
+				83C09F452ABC7DAF00C50A01 /* FactError.swift in Sources */,
+				83C09F432ABC7D8F00C50A01 /* ContentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
